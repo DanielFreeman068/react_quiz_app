@@ -93,6 +93,9 @@ const renderQuizContent = () => {
 
     return (
     <>
+    <button className="quiz-exit-btn">
+        <a href="/">Quit</a>
+    </button>
     <div className="score">
         {score} / {quizQuestions.length}
     </div>

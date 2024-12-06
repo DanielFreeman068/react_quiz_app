@@ -6,6 +6,37 @@ body {
   background: linear-gradient(135deg, #7b1fa2, #512da8);
 }
 
+/* landing page styling */
+.quiz-start-container {
+  text-align: center;
+  margin:0 auto;
+  padding: 3rem;
+  background: #e1f5fe;
+  border-radius: 0.75rem;
+  width: 400px;
+}
+
+.quiz-start-btn {
+  text-align: center;
+  margin: 1rem auto;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border:2px solid #3b82f6;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-start-btn:hover {
+  background-color: #2563eb;
+}
+
+.quiz-start-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+
 /* Quiz Application Styles */
 .quiz-app-container {
   min-height: 100vh;
@@ -173,4 +204,23 @@ body {
 
 .quiz-restart-btn:hover {
   background-color: #2563eb;
+}
+
+.quiz-exit-btn {
+  margin-top: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border:2px solid #3b82f6;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-exit-btn:hover {
+  background-color: #2563eb;
+}
+
+.quiz-exit-btn a {
+  text-decoration: none;
+  color: white;
 }
