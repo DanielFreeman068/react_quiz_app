@@ -34,6 +34,7 @@ const [showFeedback, setShowFeedback] = useState(false);
 const [isCorrect, setIsCorrect] = useState(false);
 const [quizCompleted, setQuizCompleted] = useState(false);
 const [showBonus, setShowBonus] = useState(false);
+const [finishWithoutBonus, setFinishWithoutBonus] = useState(false)
 //takes in the user's answer as a parameter and checks it to the correct answer followed by adding or subtracting to your score based on the outcome
 const handleAnswer = (answer) => {
     if (showFeedback) return;
@@ -45,7 +46,7 @@ const handleAnswer = (answer) => {
     // Score calculation for answerrs
     setScore(prev => {
     if (showBonus) {
-        return correct ? prev + 2 : prev;
+        return correct ? prev + 2 : prev -2;
     } else {
         return correct ? prev + 1 : prev -1;
     }
@@ -56,8 +57,9 @@ const handleAnswer = (answer) => {
 const handleNextQuestion = () => {
     if (!showFeedback) return;
     if (currentQuestion < quizQuestions.length - 1) {
-        setCurrentQuestion(prev => prev + 1);
-    } else if (!showBonus) {
+
+        setCurrentQuestion((prev) => prev + 1);
+    } else if (!showBonus && !finishWithoutBonus) {
         setShowBonus(true);
     } else {
         setQuizCompleted(true);
@@ -73,8 +75,12 @@ const restartQuiz = () => {
     setShowFeedback(false);
     setQuizCompleted(false);
     setShowBonus(false);
+    setFinishWithoutBonus(false);
 };
-
+//sets finishWithoutBonus to true
+const finishBeforeBonus = () => {
+    setQuizCompleted(true);
+};
 const renderQuizContent = () => {
     //if the quiz is done render the end score page with restart button
     if (quizCompleted) {
@@ -134,6 +140,9 @@ const renderQuizContent = () => {
             {/* ternary to check if the next question it a bonus or just regular */}
             {currentQuestion < quizQuestions.length - 1 ? "Next Question" : (showBonus ? "Finish Quiz" : "Bonus Question")}
         </button>
+        {currentQuestion === quizQuestions.length - 1 && !showBonus ? (<button onClick={finishBeforeBonus} disabled={!showFeedback} className={`quiz-next-btn ${showFeedback ? 'quiz-next-btn-active' : 'quiz-next-btn-disabled'}`}>
+            Finish Quiz
+        </button>) : null}
     </div>
     </>
 )};
