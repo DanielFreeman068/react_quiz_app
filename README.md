@@ -1,3 +1,65 @@
+# React  Quiz App
+
+## Overview
+
+The **React Quiz App** is an interactive and engaging quiz application designed to test soccer enthusiasts' knowledge. It features real-time feedback, dynamic scoring, a bonus question, and a clean, responsive user interface.
+
+---
+
+## Features
+
+- **20 Soccer Questions:** Covering topics such as World Cup history, players, teams, and more.
+- **Bonus Question:** A chance to earn additional points.
+- **Feedback System:** Displays immediate feedback on your answer.
+- **Dynamic Scoring:** Points are adjusted based on correctness.
+- **Completion Screen:** Summarizes your final score and offers a restart option.
+- **Restart and Quit Options:** Start over or exit at any time.
+- **Responsive UI:** Fully responsive layout for an optimal user experience.
+
+---
+
+## Prerequisites
+
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+---
+
+## Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/react-soccer-quiz.git
+
+### Dependencies
+
+This project uses the following libraries:
+
+- **[React](https://reactjs.org/):** A JavaScript library for building user interfaces.
+- **[React DOM](https://reactjs.org/docs/react-dom.html):** Provides DOM-specific methods that can be used at the top level of your app.
+- **[React Router DOM](https://reactrouter.com/):** Enables navigation and routing in your React application.
+- **[Lucide React](https://lucide.dev/docs/lucide-react):** A collection of modern, lightweight SVG icons for React.
+- **[React Icons](https://react-icons.github.io/react-icons/):** Provides a library of popular icons for React projects.
+- **[React Scripts](https://www.npmjs.com/package/react-scripts):** A set of scripts and configurations used by Create React App.
+
+---
+
+**Full Dependency List from `package.json`:**
+
+```json
+"dependencies": {
+  "cra-template": "1.2.0",
+  "lucide-react": "^0.468.0",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "react-icons": "^5.4.0",
+  "react-router-dom": "^7.0.2",
+  "react-scripts": "^5.0.1"
+}
+```
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
