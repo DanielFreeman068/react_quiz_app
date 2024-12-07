@@ -150,6 +150,7 @@ body {
 }
 
 .quiz-next-btn {
+  width:160px;
   margin:0 auto;
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
