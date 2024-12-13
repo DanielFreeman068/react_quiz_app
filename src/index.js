@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Quiz from './quiz/Quiz';
+import Quiz from './Quiz';
 // Import necessary components for routing
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
